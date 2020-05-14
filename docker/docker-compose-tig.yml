@@ -11,6 +11,8 @@ telegraf:
   container_name: telegraf
   links:
     - influxdb
+  volumes:
+    - ./telegraf.conf:/etc/telegraf/telegraf.conf
 
 grafana:
   image: grafana/grafana:latest
